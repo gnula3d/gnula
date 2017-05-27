@@ -1,10 +1,19 @@
-﻿
+﻿// --------------------------------------------------------------------------------------------------------------------
+// <copyright file="PlayerNameInputField.cs" company="Exit Games GmbH">
+//   Part of: Photon Unity Networking Demos
+// </copyright>
+// <summary>
+//  Let the player input his name to be saved as the network player Name, viewed by alls players above each  when in the same room. 
+// </summary>
+// <author>developer@exitgames.com</author>
+// --------------------------------------------------------------------------------------------------------------------
+
 using UnityEngine;
 using UnityEngine.UI;
 
 using System.Collections;
 
-namespace Com.Gnula3d.Multiuser
+namespace ExitGames.Demos.DemoAnimator
 {
 	/// <summary>
 	/// Player name input field. Let the user input his name, will appear above the player in the game.
@@ -20,12 +29,12 @@ namespace Com.Gnula3d.Multiuser
 		#endregion
 
 		#region MonoBehaviour CallBacks
-
+		
 		/// <summary>
 		/// MonoBehaviour method called on GameObject by Unity during initialization phase.
 		/// </summary>
 		void Start () {
-
+		
 			string defaultName = "";
 			InputField _inputField = this.GetComponent<InputField>();
 
@@ -42,7 +51,7 @@ namespace Com.Gnula3d.Multiuser
 		}
 
 		#endregion
-
+		
 		#region Public Methods
 
 		/// <summary>
@@ -56,7 +65,7 @@ namespace Com.Gnula3d.Multiuser
 
 			PlayerPrefs.SetString(playerNamePrefKey,value);
 		}
-
+		
 		#endregion
 	}
 }

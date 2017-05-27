@@ -1,11 +1,20 @@
-﻿
+﻿// --------------------------------------------------------------------------------------------------------------------
+// <copyright file="PlayerUI.cs" company="Exit Games GmbH">
+//   Part of: Photon Unity Networking Demos
+// </copyright>
+// <summary>
+//  Used in DemoAnimator to deal with the networked player instance UI display tha follows a given player to show its health and name
+// </summary>
+// <author>developer@exitgames.com</author>
+// --------------------------------------------------------------------------------------------------------------------
+
 
 using UnityEngine;
 using UnityEngine.UI;
 
 using System.Collections;
 
-namespace Com.Gnula3d.Multiuser
+namespace ExitGames.Demos.DemoAnimator
 {
 	/// <summary>
 	/// Player UI. Constraint the UI to follow a PlayerManager GameObject in the world,
@@ -21,7 +30,8 @@ namespace Com.Gnula3d.Multiuser
 		[Tooltip("UI Text to display Player's Name")]
 		public Text PlayerNameText;
 
-
+		[Tooltip("UI Slider to display Player's Health")]
+		public Slider PlayerHealthSlider;
 
 		#endregion
 
@@ -40,7 +50,7 @@ namespace Com.Gnula3d.Multiuser
 		#endregion
 
 		#region MonoBehaviour Messages
-
+		
 		/// <summary>
 		/// MonoBehaviour method called on GameObject by Unity during early initialization phase
 		/// </summary>
@@ -62,7 +72,10 @@ namespace Com.Gnula3d.Multiuser
 			}
 
 
-
+			// Reflect the Player Health
+			if (PlayerHealthSlider != null) {
+				PlayerHealthSlider.value = _target.Health;
+			}
 		}
 
 		/// <summary>
@@ -75,14 +88,14 @@ namespace Com.Gnula3d.Multiuser
 			if (_targetRenderer!=null) {
 				this.gameObject.SetActive(_targetRenderer.isVisible);
 			}
-
+			
 			// #Critical
 			// Follow the Target GameObject on screen.
 			if (_targetTransform!=null)
 			{
 				_targetPosition = _targetTransform.position;
 				_targetPosition.y += _characterControllerHeight;
-
+				
 				this.transform.position = Camera.main.WorldToScreenPoint (_targetPosition) + ScreenOffset;
 			}
 
