@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: 0c394c3a6c261cf419d5b2c1be67743f
+timeCreated: 1464056578
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - DJB Get Digital
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 549aa15b63aeb2243a6b3ba5516bed94, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
