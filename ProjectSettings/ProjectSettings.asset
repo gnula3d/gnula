@@ -42,10 +42,8 @@ PlayerSettings:
     duration: 2
   - logo: {fileID: 21300000, guid: e12288b01a952ed4b869f22bbf2b6fcf, type: 3}
     duration: 3.9
-  m_SplashScreenBackgroundLandscape: {fileID: 1, guid: 00000000000000000000000000000000,
-    type: 0}
-  m_SplashScreenBackgroundPortrait: {fileID: 1, guid: 00000000000000000000000000000000,
-    type: 0}
+  m_SplashScreenBackgroundLandscape: {fileID: 0}
+  m_SplashScreenBackgroundPortrait: {fileID: 0}
   m_VirtualRealitySplashScreen: {fileID: 0}
   m_HolographicTrackingLossScreen: {fileID: 0}
   defaultScreenWidth: 800
@@ -693,7 +691,7 @@ PlayerSettings:
     Unity_Ads: 0
   facebookSdkVersion: 7.9.1
   apiCompatibilityLevel: 2
-  cloudProjectId: b413f8d1-04fa-42a1-965b-7c7ddefbacc1
+  cloudProjectId: 54546a8a-7493-40c9-b2e5-ab1a1cc92170
   projectName: gnula3d
   organizationId: gnula3d
   cloudEnabled: 0
